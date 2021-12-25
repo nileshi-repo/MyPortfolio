@@ -1,2 +1,2 @@
 # studious-journey
-A project to to create your portfolio website.
+A project to create your portfolio website.
