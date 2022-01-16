@@ -1,0 +1,98 @@
+﻿@page
+@model PersonalProjectsModel
+@{
+    ViewData["Title"] = "Personal Projects";
+}
+
+<div class="">
+    <h1 class="display-4 text-center pb-2">Personal Projects</h1>
+    <div class="row row-cols-1 row-cols-sm-2 g-4">
+
+        <!-- Project 1 - My Portfolio -->
+        <div class="col">
+            <div class="card h-100 p-1 text-white bg-secondary">
+                <a asp-page="/Index">
+                    <img src="~/img/portfolio_project_screenshot.png" class="card-img-top" alt="MyPortfolio Project Screenshot">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">My Portfolio Project</h5>
+                    <p class="card-text">
+                        <ul class="fa-ul">
+                            <li>
+                                <span class="fa-li pe-2"><i class="fas fa-star text-warning"></i></span>
+                                The result of this project is what you are seeing right now. <i class="far fa-smile"></i>
+                            </li>
+                            <li>
+                                <span class="fa-li pe-2"><i class="fas fa-star text-warning"></i></span>
+                                This is a .Net Core 6.0 razor project developed in Visual Studio 2022.
+                            </li>
+                            <li>
+                                <span class="fa-li pe-2"><i class="fas fa-star text-warning"></i></span>
+                                It has multiple static pages going over my detailed portfolio.
+                            </li>
+                            <li>
+                                <span class="fa-li pe-2"><i class="fas fa-star text-warning"></i></span>
+                                Used github for version control.
+                            </li>
+                            <li>
+                                <span class="fa-li pe-2"><i class="fas fa-star text-warning"></i></span>
+                                It is deployed on Azure cloud as a WebApp project. Currently it is running from Azure cloud.
+                            </li>
+                            <li>
+                                <span class="fa-li pe-2"><i class="fas fa-star text-warning"></i></span>
+                                To view the source code, please refer github link below.
+                            </li>
+                        </ul>
+                    </p>
+                    <a href="https://github.com/nileshi-repo/MyPortfolio" target="_blank" class="btn btn-light">My Portfolio Github</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 - Expense Tracker -->
+        <div class="col">
+            <div class="card h-100 p-1 text-white bg-secondary">
+                <a asp-page="/Index">
+                    <img src="~/img/expense_tracker_project_screenshot.jpg" class="card-img-top" alt="MyExpenseTracker Project Screenshot">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">My Expense Tracker Project</h5>
+                    <p class="card-text">
+                        <ul class="fa-ul">
+                            <li>
+                                <span class="fa-li pe-2"><i class="fas fa-star text-warning"></i></span>
+                                This an expense tracker application used to manage your expenses.
+                            </li>
+                            <li>
+                                <span class="fa-li pe-2"><i class="fas fa-star text-warning"></i></span>
+                                This is a .Net Core 6.0 blazor server project developed in Visual Studio 2022.
+                            </li>
+                            <li>
+                                <span class="fa-li pe-2"><i class="fas fa-star text-warning"></i></span>
+                                User enters transaction details using frontend. Transaction details are stored in a SQL server database.
+                            </li>
+                            <li>
+                                <span class="fa-li pe-2"><i class="fas fa-star text-warning"></i></span>
+                                Used github for version control.
+                            </li>
+                            <li>
+                                <span class="fa-li pe-2"><i class="fas fa-star text-warning"></i></span>
+                                Project follows a clean archotecture.
+                            </li>
+                            <li>
+                                <span class="fa-li pe-2"><i class="fas fa-star text-warning"></i></span>
+                                It is deployed on AWS clouse in a Virtaul Machine. Currently it is running from AWS cloud.
+                            </li>
+                            <li>
+                                <span class="fa-li pe-2"><i class="fas fa-star text-warning"></i></span>
+                                To view the source code, please refer github link below.
+                            </li>
+                        </ul>
+                    </p>
+                    <a href="https://github.com/nileshi-repo/MyPortfolio" target="_blank" class="btn btn-light">My Expense Tracker Github</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyPortfolio</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/fontawesome.css" />
+    <!-- link rel="stylesheet" href="~/MyPortfolioProject.styles.css" asp-append-version="true" / -->
+</head>
+<body>
+    <div class="container-fluid overflow-hidden">
+        <div class="row vh-100 overflow-auto">
+            <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-primary d-flex sticky-top pt-sm-4">
+                <div class="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-white">
+                    <a class="d-flex align-items-center pb-sm-4 mb-md-0 me-md-auto text-white text-decoration-none justify-content-center"
+                       asp-area="" asp-page="/Index">
+                        <img src="~/img/logo_pic.png" class="img-thumbnail rounded-circle w-75 d-none d-sm-block" alt="Logo Image">
+                        <img src="~/img/logo_pic.png" class="img-thumbnail rounded-circle w-25 d-block d-sm-none" alt="Logo Image">
+                    </a>
+                    <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0
+                        flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start" id="menu">
+                        <li class="nav-item">
+                            <a class="nav-link px-sm-0 px-2" asp-area="" asp-page="/Index">
+                                <i class="fas fa-user-tie"></i>
+                                <span class="ms-2 d-none d-sm-inline">About John</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-sm-0 px-2" asp-area="" asp-page="/Skills">
+                                <i class="fas fa-tools"></i>
+                                <span class="ms-2 d-none d-sm-inline">Skills</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link px-sm-0 px-2" asp-area="" asp-page="/Certifications">
+                                <i class="fas fa-trophy"></i>
+                                <span class="ms-2 d-none d-sm-inline">Certifications</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-sm-0 px-2" asp-area="" asp-page="/PersonalProjects">
+                                <i class="fas fa-laptop-code"></i>
+                                <span class="ms-2 d-none d-sm-inline">Personal Projects</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-sm-0 px-2" asp-area="" asp-page="/Experience">
+                                <i class="fas fa-history"></i>
+                                <span class="ms-2 d-none d-sm-inline">Experience</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-sm-0 px-2" asp-area="" asp-page="/Education">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span class="ms-2 d-none d-sm-inline">Education</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-sm-0 px-2" asp-area="" asp-page="/Contact">
+                                <i class="fas fa-address-card"></i>
+                                <span class="ms-2 d-none d-sm-inline">Contact</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col d-flex flex-column h-100">
+                <main class="row">
+                    <div class="col pt-2 pt-sm-4">
+                        @RenderBody()
+                    </div>
+                </main>
+                <br />
+                <footer class="row border-top text-muted py-1 mt-auto">
+                    <div class="col text-center">
+                        &copy; 2021 - MyPortfolio - <a asp-area="" asp-page="/Privacy">Privacy</a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

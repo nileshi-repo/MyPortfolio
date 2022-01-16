@@ -1,0 +1,48 @@
+﻿@page
+@model EducationModel
+@{
+    ViewData["Title"] = "Education";
+}
+
+
+<h1 class="display-4 text-center pb-2">Education</h1>
+<table class="d-md-table d-none table table-bordered table-light w-auto mx-auto align-middle">
+    <tbody>
+        <tr class="">
+            <td class="p-4">Master of Science (MS) - Computer Science</td>
+            <td class="p-4">Harvard University, MA</td>
+            <td class="p-4">2010</td>
+        </tr>
+        <tr>
+            <td class="p-4">Bachelor of Engineering (BE) - Computer Science</td>
+            <td class="p-4">Massachusetts Institue of Technology (MIT), MA</td>
+            <td class="p-4">2008</td>
+        </tr>
+    </tbody>
+</table>
+<table class="d-md-none d-table table w-auto mx-auto">
+    <tbody class="">
+        <tr><td class="p-0"></td></tr>
+        <tr class="table-light">
+            <td class="">Master of Science
+                <!-- This span tag with text "MS" can be removed completely. 
+                     Showing it just as an example.
+                -->
+                <span class="d-none d-md-block"> (MS)</span>
+                - Computer Science
+            </td>
+        </tr>
+        <tr class="table-light">
+            <td class="">Harvard University, MA&emsp;-&emsp;2010</td>
+        </tr>
+
+        <tr class=""><td class="p-3" ></td></tr>
+
+        <tr class="table-light">
+            <td class="" >Bachelor of Engineering - Computer Science</td>
+        </tr>
+        <tr class="table-light">
+            <td class="">MIT&emsp;-&emsp;2008</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,58 @@
+﻿@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<div class="container-fluid">
+    <h1 class="display-4 text-center pb-2">Contact John</h1>
+    <div class="d-flex flex-column align-items-center">
+        <div><p>You can contact John via Email, Phone or Linked-in.</p></div>
+        <div class="">
+            <!-- Email -->
+            <div class="d-flex flex-row mt-3">
+                <a class="text-decoration-none" href="mailto:john.doe@some-email.com" target="_blank">
+                    <span class="icons bg-warning text-light col-1">
+                        <i class="far fa-envelope"></i>
+                    </span>
+                </a>
+                <div class="text-left mx-4">
+                    <span>Email</span>
+                    <a class="" href="mailto:john.doe@some-email.com" target="_blank">
+                        <p>john.doe@some-email.com</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="d-flex flex-row mt-3">
+                <a class="text-decoration-none" href="https://www.facebook.com/" target="_blank">
+                    <span class="icons bg-success text-light col-1">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                </a>
+                <div class="text-left mx-4">
+                    <span>Phone</span>
+                    <a class="" href="tel:+19999999999">
+                        <p>+1 999 999 9999</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Linked-In -->
+            <div class="d-flex flex-row mt-3">
+                <a class="text-decoration-none" href="https://www.linkedin.com/" target="_blank">
+                    <span class="icons bg-primary text-light col-1">
+                        <i class="fab fa-linkedin-in"></i>
+                    </span>
+                </a>
+                <div class="text-left mx-4">
+                    <span>Linked-in</span>
+                    <a class="" href="https://www.linkedin.com/" target="_blank">
+                    <p>Follow John</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
