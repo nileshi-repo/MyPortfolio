@@ -10,56 +10,78 @@
     <!-- link rel="stylesheet" href="~/MyPortfolioProject.styles.css" asp-append-version="true" / -->
 </head>
 <body>
+    <!-- IMPORTANT tip_cc: Responsive convention followed throughout all pages -
+        Line 1 - Mobile/default & up settings
+        Line 2 - Tablet/Small screen & up settings
+        Line 3 - Desktop/Large screen & up settings and so on...
+        Last line - Other settings
+    -->
     <div class="container-fluid overflow-hidden">
+        <!-- tip_cc: vh-100 required to show sidebar on full vertical screen -->
+        <!-- tip_cc: overflow-auto is required to enable horizontal & vertical scrolling when content does not fit in available window -->
         <div class="row vh-100 overflow-auto">
-            <div class="col-12 col-sm-3 col-xl-2 px-sm-2 px-0 bg-primary d-flex sticky-top pt-sm-4">
-                <div class="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-white">
-                    <a class="d-flex align-items-center pb-sm-4 mb-md-0 me-md-auto text-white text-decoration-none justify-content-center"
-                       asp-area="" asp-page="/Index">
-                        <img src="~/img/logo_pic.png" class="img-thumbnail rounded-circle w-75 d-none d-sm-block" alt="Logo Image">
-                        <img src="~/img/logo_pic.png" class="img-thumbnail rounded-circle w-25 d-block d-sm-none" alt="Logo Image">
-                    </a>
-                    <ul class="nav nav-pills flex-sm-column flex-row flex-nowrap flex-shrink-1 flex-sm-grow-0
-                        flex-grow-1 mb-sm-auto mb-0 justify-content-center align-items-center align-items-sm-start" id="menu">
+            <!-- Sidebar Blue Strip -->
+            <div class="col-12 p-0
+                        col-sm-3
+                        col-xl-2
+                        bg-primary d-flex sticky-top">
+                <!-- tip_cc: sidebar items alignment -->
+                <div class="flex-row       
+                            flex-sm-column      
+                            d-flex text-white align-items-center">
+
+                    <!-- Logo Image container -->
+                    <div class="col-1    ms-2 me-3
+                                col-sm-8 m-sm-4    pt-sm-1
+                                d-flex">
+                        <a class="text-white text-decoration-none" asp-area="" asp-page="/Index">
+                            <img src="~/img/logo_pic.png" class="img-fluid img-thumbnail rounded-circle d-block" alt="Logo Image">
+                        </a>
+                    </div>
+
+                    <!-- Sidebar Navigation Links -->
+                    <ul class="flex-row       flex-grow-1    justify-content-evenly
+                               flex-sm-column flex-sm-grow-0 
+                               flex-nowrap nav nav-pills" id="menu">
+
                         <li class="nav-item">
-                            <a class="nav-link px-sm-0 px-2" asp-area="" asp-page="/Index">
+                            <a class="nav-link px-2 px-sm-0" asp-area="" asp-page="/Index">
                                 <i class="fas fa-user-tie"></i>
                                 <span class="ms-2 d-none d-sm-inline">About John</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-sm-0 px-2" asp-area="" asp-page="/Skills">
+                            <a class="nav-link px-2 px-sm-0" asp-area="" asp-page="/Skills">
                                 <i class="fas fa-tools"></i>
                                 <span class="ms-2 d-none d-sm-inline">Skills</span>
                             </a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link px-sm-0 px-2" asp-area="" asp-page="/Certifications">
+                            <a class="nav-link px-2 px-sm-0" asp-area="" asp-page="/Certifications">
                                 <i class="fas fa-trophy"></i>
                                 <span class="ms-2 d-none d-sm-inline">Certifications</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-sm-0 px-2" asp-area="" asp-page="/PersonalProjects">
+                            <a class="nav-link px-2 px-sm-0" asp-area="" asp-page="/PersonalProjects">
                                 <i class="fas fa-laptop-code"></i>
                                 <span class="ms-2 d-none d-sm-inline">Personal Projects</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-sm-0 px-2" asp-area="" asp-page="/Experience">
+                            <a class="nav-link px-2 px-sm-0" asp-area="" asp-page="/Experience">
                                 <i class="fas fa-history"></i>
                                 <span class="ms-2 d-none d-sm-inline">Experience</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-sm-0 px-2" asp-area="" asp-page="/Education">
+                            <a class="nav-link px-2 px-sm-0" asp-area="" asp-page="/Education">
                                 <i class="fas fa-graduation-cap"></i>
                                 <span class="ms-2 d-none d-sm-inline">Education</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link px-sm-0 px-2" asp-area="" asp-page="/Contact">
+                            <a class="nav-link px-2 px-sm-0" asp-area="" asp-page="/Contact">
                                 <i class="fas fa-address-card"></i>
                                 <span class="ms-2 d-none d-sm-inline">Contact</span>
                             </a>
@@ -67,6 +89,8 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- Content Section -->
             <div class="col d-flex flex-column h-100">
                 <main class="row">
                     <div class="col pt-2 pt-sm-4">
@@ -74,12 +98,14 @@
                     </div>
                 </main>
                 <br />
+                <!-- Footer -->
                 <footer class="row border-top text-muted py-1 mt-auto">
                     <div class="col text-center">
-                        &copy; 2021 - MyPortfolio - <a asp-area="" asp-page="/Privacy">Privacy</a>
+                        &copy; 2021 - MyPortfolio
                     </div>
                 </footer>
             </div>
+
         </div>
     </div>
 
